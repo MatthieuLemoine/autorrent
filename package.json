@@ -1,0 +1,33 @@
+{
+  "name": "autorrent",
+  "version": "1.0.0",
+  "description": "Auto downloading of torrent files.",
+  "main": "index.js",
+  "repository": "https://github.com/MatthieuLemoine/autorrent",
+  "author": "MatthieuLemoine",
+  "license": "MIT",
+  "scripts": {
+    "start": "env-cmd .env node src/index",
+    "lint": "eslint **/*.js",
+    "lint:fix": "eslint --fix **/*.js",
+    "pretty":
+      "prettier-eslint --single-quote --trailing-comma es5 --write \"**/*.js\" \"**/*.json\""
+  },
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb": "^16.0.0",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-jsx-a11y": "6.0.2",
+    "eslint-plugin-react": "7.4.0",
+    "prettier": "^1.7.4",
+    "prettier-eslint": "^8.2.1",
+    "prettier-eslint-cli": "^4.4.0"
+  },
+  "dependencies": {
+    "env-cmd": "^7.0.0",
+    "feedparser": "^2.2.2",
+    "lowdb": "^1.0.0",
+    "request": "^2.83.0",
+    "ssh2-sftp-client": "^2.0.1"
+  }
+}
