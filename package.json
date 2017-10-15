@@ -7,11 +7,10 @@
   "author": "MatthieuLemoine",
   "license": "MIT",
   "scripts": {
-    "start": "env-cmd .env node src/index",
+    "start": "env-cmd .env node index",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint --fix **/*.js",
-    "pretty":
-      "prettier-eslint --single-quote --trailing-comma es5 --write \"**/*.js\" \"**/*.json\""
+    "pretty": "prettier-eslint --single-quote --trailing-comma es5 --write \"**/*.js\" \"**/*.json\""
   },
   "devDependencies": {
     "eslint": "^4.8.0",
@@ -24,10 +23,13 @@
     "prettier-eslint-cli": "^4.4.0"
   },
   "dependencies": {
+    "@std/esm": "^0.11.3",
+    "chalk": "^2.1.0",
     "env-cmd": "^7.0.0",
     "feedparser": "^2.2.2",
     "lowdb": "^1.0.0",
+    "parse-torrent-name": "^0.5.4",
     "request": "^2.83.0",
-    "ssh2-sftp-client": "^2.0.1"
+    "request-promise": "^4.2.2"
   }
 }
