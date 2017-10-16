@@ -8,9 +8,12 @@
   "license": "MIT",
   "scripts": {
     "start": "env-cmd .env node index",
+    "add": "env-cmd .env node index --add",
+    "remove": "env-cmd .env node index --remove",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint --fix **/*.js",
-    "pretty": "prettier-eslint --single-quote --trailing-comma es5 --write \"**/*.js\" \"**/*.json\""
+    "pretty":
+      "prettier-eslint --single-quote --trailing-comma es5 --write \"**/*.js\" \"**/*.json\""
   },
   "devDependencies": {
     "eslint": "^4.8.0",
@@ -27,9 +30,11 @@
     "chalk": "^2.1.0",
     "env-cmd": "^7.0.0",
     "feedparser": "^2.2.2",
+    "inquirer": "^3.3.0",
     "lowdb": "^1.0.0",
     "parse-torrent-name": "^0.5.4",
     "request": "^2.83.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "yargs": "^9.0.1"
   }
 }

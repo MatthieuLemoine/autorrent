@@ -10,7 +10,10 @@ export default getTorrents;
 
 async function getTorrents() {
   // Tv shows that we are following
-  const tvShows = db.get('tvShows').value();
+  const tvShows = db
+    .get('tvShows')
+    .value()
+    .map(item => item.toLowerCase());
   // Video resolutions
   const resolutions = db.get('resolutions').value();
   // Alrady downloaded torrents
@@ -19,7 +22,8 @@ async function getTorrents() {
   const recentTorrents = await getRecentTorrents();
   // Torrents that we may be interested in
   const followedTorrents = recentTorrents.filter(
-    torrent => tvShows.includes(torrent.title) && resolutions.includes(torrent.resolution),
+    torrent =>
+      tvShows.includes(torrent.title.toLowerCase()) && resolutions.includes(torrent.resolution),
   );
   // Remove already downloaded
   const newTorrents = followedTorrents.filter(
