@@ -21,3 +21,15 @@ yarn install
 ```
 yarn start
 ```
+
+## Add tv show
+
+```
+yarn run add
+```
+
+## Remove tv show
+
+```
+yarn run remove
+```
