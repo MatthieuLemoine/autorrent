@@ -3,3 +3,4 @@ node_modules
 db.json
 .esm-cache
 *.log
+tvShows.json

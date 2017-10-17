@@ -1,16 +1,22 @@
-import inquirer from 'inquirer';
 import chalk from 'chalk';
+import Enquirer from 'enquirer';
+import promptList from 'prompt-list';
 import db from '../db';
 
+const enquirer = new Enquirer();
+enquirer.register('list', promptList);
+
+const questions = [
+  {
+    type: 'list',
+    name: 'name',
+    message: 'Pick a tvshow to remove : ',
+    choices: db.get('tvShows').value(),
+  },
+];
+
 (async () => {
-  const { name } = await inquirer.prompt([
-    {
-      type: 'list',
-      name: 'name',
-      message: 'Pick a tvshow to remove : ',
-      choices: db.get('tvShows').value(),
-    },
-  ]);
+  const { name } = await enquirer.ask(questions);
   if (!name) {
     return;
   }

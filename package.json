@@ -10,6 +10,8 @@
     "start": "env-cmd .env node index",
     "add": "env-cmd .env node index --add",
     "remove": "env-cmd .env node index --remove",
+    "search": "env-cmd .env node index --search",
+    "updateList": "env-cmd .env node index --getList",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint --fix **/*.js",
     "pretty":
@@ -28,11 +30,13 @@
   "dependencies": {
     "@std/esm": "^0.11.3",
     "chalk": "^2.1.0",
+    "enquirer": "^1.0.2",
     "env-cmd": "^7.0.0",
     "feedparser": "^2.2.2",
-    "inquirer": "^3.3.0",
     "lowdb": "^1.0.0",
     "parse-torrent-name": "^0.5.4",
+    "prompt-autocompletion": "MatthieuLemoine/prompt-autocompletion",
+    "prompt-list": "^2.2.0",
     "request": "^2.83.0",
     "request-promise": "^4.2.2",
     "yargs": "^9.0.1"

@@ -33,3 +33,17 @@ yarn run add
 ```
 yarn run remove
 ```
+
+## Search an episode/season
+
+- To generate the tv show list you need to run the following command once :
+
+```
+yarn run updateList
+```
+
+- Search
+
+```
+yarn run search
+```
