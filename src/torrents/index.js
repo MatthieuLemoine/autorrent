@@ -50,7 +50,7 @@ function getRecentTorrents() {
     req.on('error', reject);
     req.on('response', (res) => {
       if (res.statusCode !== 200) {
-        req.emit('error', new Error('Bad status code'));
+        req.emit('error', new Error(`Bad status code ${res.statusCode}`));
       } else {
         req.pipe(feedParser);
       }
